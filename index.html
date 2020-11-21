@@ -168,15 +168,24 @@
             let tirage6 = $('#tirage6').val();
 
 
+            if (prenom =="Gorrion" || prenom=="Alejandro"){
+                let resultat = "<h3>POUR QUOI TU DEMANDES, GORRION DE LA PRADERA, SI TU AIMES JAMAIS LES RESPONSES?</h3><br>";
+                $(".resultat").html(resultat);
+            }
+            else if (prenom =="Cherco"  || prenom=="Cecilia"){
+                let resultat = "<h3>POUR QUOI TU DEMANDES, CHERCOLINA, SI TU AS DEJA LA RESPONSE?</h3><br>";
+                $(".resultat").html(resultat);
+            }
 
-
+            else{
             let resultat = "<h3>LE YIKING NE SE TROMPE PAS</h3><br>";
             
             resultat += "<p>" + prenom + '<br>' + question + '<br>' + "</p>";
             resultat += "<section>" + tirage1 + ',' + tirage2 + ',' + tirage3 + ',' + tirage4 + ',' + tirage5 + ',' + tirage6 + "</section>";
 
-            $(".resultat").html(resultat);
+            $(".resultat").html(resultat);}
 
+            
 
 
             if (tirage6 == 6) {
