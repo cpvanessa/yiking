@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yiking</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!--  bg-light   on a enlevé la couleur background du header -->
+            <a class="navbar-brand" href="#">
+                <figure><img id='logo' src="assets/images/logoyikin.jpg" alt=""></figure>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://yi-king-gratuit.com/yi-king-interpretation-64-hexagrammes.html"
+                        target="blanck">Les Hexagrammes</a>
+                    <a class="nav-link" href="#">Contact</a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container-fluid">
+
+        <h1>LE YIKING EST LA REPONSE</h1>
+        <section class="row">
+
+            <section class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+
+                <figure><img id='imagen' src="assets/images/yikin.jpg" alt=""></figure>
+                <article class="instructions">
+                    <p>Lance les 3 monnaies et adittionne leurs valeurs</p>
+                    <p>Face vaut 2 et pile vaut 3</p>
+                </article>
+            </section>
+            <section class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <form>
+                    <div>
+                        <label for="prenom">Ton prenom</label>
+                        <input type="text" class="donnees" id="prenom">
+                    </div>
+                    <div>
+                        <label for="question">Ta question</label>
+                        <textarea id="story" name="story" rows="3" cols="24">
+
+</textarea>
+                    </div>
+                    <div>
+                        <label for="tirage">Tirage1</label>
+                        <input type="number" class="tirage" id="tirage1">
+                    </div>
+                    <div>
+                        <label for="tirage">Tirage2</label>
+                        <input type="number" class="tirage" id="tirage2">
+                    </div>
+                    <div>
+                        <label for="tirage">Tirage3</label>
+                        <input type="number" class="tirage" id="tirage3">
+                    </div>
+                    <div>
+                        <label for="tirage">Tirage4</label>
+                        <input type="number" class="tirage" id="tirage4">
+                    </div>
+                    <div>
+                        <label for="tirage">Tirage5</label>
+                        <input type="number" class="tirage" id="tirage5">
+                    </div>
+                    <div>
+                        <label for="tirage">Tirage6</label>
+                        <input type="number" class="tirage" id="tirage6">
+                    </div>
+
+
+                    <div id="button">
+                        <input id="submit" type="submit" value="Resultat">
+                    </div>
+
+
+                </form>
+
+            </section>
+
+            <section class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                <section class="resultat">
+                </section>
+                <section class="hexagramme">
+                    <p class="hexagramme6">
+                    </p>
+                    <p class="hexagramme5">
+                    </p>
+                    <p class="hexagramme4">
+                    </p>
+                    <p class="hexagramme3">
+                    </p>
+                    <p class="hexagramme2">
+                    </p>
+                    <p class="hexagramme1">
+
+                    </p>
+                </section>
+
+            </section>
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer></footer>
+
+
+
+    <!-- script js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+
+
+
+        $("form").submit(function (e) {
+            e.preventDefault();
+            let prenom = $("#prenom").val();
+            let question = $("#question").val();
+            let tirage1 = $('#tirage1').val();
+            let tirage2 = $('#tirage2').val();
+            let tirage3 = $('#tirage3').val();
+            let tirage4 = $('#tirage4').val();
+            let tirage5 = $('#tirage5').val();
+            let tirage6 = $('#tirage6').val();
+
+
+
+
+
+
+            let resultat = "<h3>LE YIKING NE SE TROMPE PAS</h3><br>";
+            resultat += "<p>" + prenom + '<br>' + question + '<br>' + "</p>";
+            resultat += "<section>" + tirage1 + ',' + tirage2 + ',' + tirage3 + ',' + tirage4 + ',' + tirage5 + ',' + tirage6 + "</section>";
+
+            $(".resultat").html(resultat);
+
+
+
+            if (tirage6 == 6) {
+                let hex6 = "<p class='mutante'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme6").html(hex6);
+            }
+            else if (tirage6 == 7) {
+                let hex6 = "<p class ='normal'>▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme6").html(hex6);
+            }
+            else if (tirage6 == 8) {
+                let hex6 = "<p class ='normal'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme6").html(hex6);
+            }
+            else if (tirage6 == 9) {
+                let hex6 = "<p class='mutante'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme6").html(hex6);
+            }
+            else {
+                let hex6 = "Valeur invalide!";
+                $(".hexagramme6").html(hex6);
+            }
+
+            if (tirage5 == 6) {
+                let hex5 = "<p class='mutante'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme5").html(hex5);
+            }
+            else if (tirage5 == 7) {
+                let hex5 = "<p class ='normal'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme5").html(hex5);
+            }
+            else if (tirage5 == 8) {
+                let hex5 = "<p class ='normal'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme5").html(hex5);
+            }
+            else if (tirage5 == 9) {
+                let hex5 = "<p class='mutante'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme5").html(hex5);
+            }
+            else {
+                let hex5 = "Valeur invalide!";
+                $(".hexagramme5").html(hex5);
+            }
+
+            if (tirage4 == 6) {
+                let hex4 = "<p class='mutante'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme4").html(hex4);
+            }
+            else if (tirage4 == 7) {
+                let hex4 = "<p class ='normal'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme4").html(hex4);
+            }
+            else if (tirage4 == 8) {
+                let hex4 = "<p class ='normal'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme4").html(hex4);
+            }
+            else if (tirage4 == 9) {
+                let hex4 = "<p class='mutante'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme4").html(hex4);
+            }
+            else {
+                let hex4 = "Valeur invalide!";
+                $(".hexagramme4").html(hex4);
+            }
+
+            if (tirage3 == 6) {
+                let hex3 = "<p class='mutante'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme3").html(hex3);
+            }
+            else if (tirage3 == 7) {
+                let hex3 = "<p class ='normal'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme3").html(hex3);
+            }
+            else if (tirage3 == 8) {
+                let hex3 = "<p class ='normal'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme3").html(hex3);
+            }
+            else if (tirage3 == 9) {
+                let hex3 = "<p class='mutante'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme3").html(hex3);
+            }
+            else {
+                let hex3 = "Valeur invalide!";
+                $(".hexagramme3").html(hex3);
+            }
+
+            if (tirage2 == 6) {
+                let hex2 = "<p class='mutante'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme2").html(hex2);
+            }
+            else if (tirage2 == 7) {
+                let hex2 = "<p class ='normal'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme2").html(hex2);
+            }
+            else if (tirage2 == 8) {
+                let hex2 = "<p class ='normal'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme2").html(hex2);
+            }
+            else if (tirage2 == 9) {
+                let hex2 = "<p class='mutante'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme2").html(hex2);
+            }
+            else {
+                let hex2 = "Valeur invalide!";
+                $(".hexagramme2").html(hex2);
+            }
+
+            if (tirage1 == 6) {
+                let hex1 = "<p class='mutante'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme1").html(hex1);
+            }
+            else if (tirage1 == 7) {
+                let hex1 = "<p class ='normal'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme1").html(hex1);
+            }
+            else if (tirage1 == 8) {
+                let hex1 = "<p class ='normal'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
+                $(".hexagramme1").html(hex1);
+            }
+            else if (tirage1 == 9) {
+                let hex1 = "<p class='mutante'>▬▬▬▬▬▬▬▬▬<p>";
+                $(".hexagramme1").html(hex1);
+            }
+            else {
+                let hex1 = "Valeur invalide!";
+                $(".hexagramme1").html(hex1);
+            }
+
+
+
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
