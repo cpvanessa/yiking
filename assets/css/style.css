@@ -40,7 +40,7 @@ h1{
     padding-left: 40px;
     margin-bottom: 40px;
     margin-top: 30px;
-    padding-top: 130px;
+    padding-top: 120px;
 }
 .mutante{
     color: red;
@@ -77,16 +77,21 @@ label, #submit{
 }
 
 .instructions{
-    padding-left: 60px;
+    padding-left: 50px;
  
 }
+@media screen and (min-width:641px){
   form{
     margin-left: 25%; 
     margin-right:25%;
-    
-   
+  }   
    
   }
+  
+  @media screen and (max-width:640px){
+    form{margin-left: 20%; 
+    margin-right:20%;
+  }}
 
 #submit{
 
