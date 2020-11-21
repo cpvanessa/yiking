@@ -72,27 +72,27 @@
                     </textarea>
                     </div>
                     <div>
-                        <label for="tirage">Tirage1</label>
+                        <label for="tirage">Tirage 1</label>
                         <input type="number" class="tirage" id="tirage1">
                     </div>
                     <div>
-                        <label for="tirage">Tirage2</label>
+                        <label for="tirage">Tirage 2</label>
                         <input type="number" class="tirage" id="tirage2">
                     </div>
                     <div>
-                        <label for="tirage">Tirage3</label>
+                        <label for="tirage">Tirage 3</label>
                         <input type="number" class="tirage" id="tirage3">
                     </div>
                     <div>
-                        <label for="tirage">Tirage4</label>
+                        <label for="tirage">Tirage 4</label>
                         <input type="number" class="tirage" id="tirage4">
                     </div>
                     <div>
-                        <label for="tirage">Tirage5</label>
+                        <label for="tirage">Tirage 5</label>
                         <input type="number" class="tirage" id="tirage5">
                     </div>
                     <div>
-                        <label for="tirage">Tirage6</label>
+                        <label for="tirage">Tirage 6</label>
                         <input type="number" class="tirage" id="tirage6">
                     </div>
 
@@ -135,8 +135,6 @@
 
 
 
-
-
     <footer></footer>
 
 
@@ -172,9 +170,17 @@
 
 
 
-
-
             let resultat = "<h3>LE YIKING NE SE TROMPE PAS</h3><br>";
+            if (prenom="Gorrion" || "Alejandro"){
+                resultat += "<h3>POUR QUOI TU DEMANDES, GORRION DE LA PRADERA, SI TU AIMES JAMAIS LES REPONSES?</h3><br>" 
+                $(".resultat").html(resultat);
+                
+                
+            }
+            else if (prenom="Cherco" || "Cecilia"){
+                resultat += "<h3>POUR QUOI TU DEMANDES, CHERCOLINA, SI TU AS DEJA LA REPONSE,</h3><br>" 
+                $(".resultat").html(resultat);}
+            else{
             resultat += "<p>" + prenom + '<br>' + question + '<br>' + "</p>";
             resultat += "<section>" + tirage1 + ',' + tirage2 + ',' + tirage3 + ',' + tirage4 + ',' + tirage5 + ',' + tirage6 + "</section>";
 
@@ -309,7 +315,7 @@
             }
       
 
-        })
+        }})
 
 
 
