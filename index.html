@@ -177,7 +177,12 @@
                 let resultat = "<h3>POUR QUOI TU DEMANDES, CHERCOLINA, SI TU AS DEJA LA RESPONSE?</h3><br>";
                 $(".resultat").html(resultat);
             }
-
+            else if (prenom == "May") {
+                let resultat = "<h3>PROBABLEMENTE BLAS TE DARIA EL MISMO CONSEJO,FRIENDLY</h3><br>";
+                $(".resultat").html(resultat);
+             
+            }
+         
             else {
                 let resultat = "<h3>LE YIKING NE SE TROMPE PAS</h3><br>";
 
@@ -192,8 +197,9 @@
 
             if (tirage6 == 6) {
                 let hex6 = "<p class='mutante'>▬▬▬▬<span class='blanc'>▬</span>▬▬▬▬<p>";
-                $(".hexagramme6").html(hex6);
-            }
+                    
+                $(".hexagramme6").html(hex6);}
+           
             else if (tirage6 == 7) {
                 let hex6 = "<p class ='normal'>▬▬▬▬▬▬▬▬▬<p>";
                 $(".hexagramme6").html(hex6);
