@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <!--  bg-light   on a enlevé la couleur background du header -->
             <a class="navbar-brand" href="#">
-                <figure><img id='logo' src="assets/images/logoyikin.jpg" alt=""></figure>
+                <figure><img id='logo' src="assets/images/logopng.png" alt=""></figure>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,10 +123,13 @@
                     <p class="hexagramme1">
 
                     </p>
+
+                    <p class="hexa"></p>
+
                 </section>
 
             </section>
-        </section>
+
 
 
 
@@ -168,24 +171,25 @@
             let tirage6 = $('#tirage6').val();
 
 
-            if (prenom =="Gorrion" || prenom=="Alejandro"){
+            if (prenom == "Gorrion" || prenom == "Alejandro") {
                 let resultat = "<h3>POUR QUOI TU DEMANDES, GORRION DE LA PRADERA, SI TU AIMES JAMAIS LES RESPONSES?</h3><br>";
                 $(".resultat").html(resultat);
             }
-            else if (prenom =="Cherco"  || prenom=="Cecilia"){
+            else if (prenom == "Cherco" || prenom == "Cecilia") {
                 let resultat = "<h3>POUR QUOI TU DEMANDES, CHERCOLINA, SI TU AS DEJA LA RESPONSE?</h3><br>";
                 $(".resultat").html(resultat);
             }
 
-            else{
-            let resultat = "<h3>LE YIKING NE SE TROMPE PAS</h3><br>";
-            
-            resultat += "<p>" + prenom + '<br>' + question + '<br>' + "</p>";
-            resultat += "<section>" + tirage1 + ',' + tirage2 + ',' + tirage3 + ',' + tirage4 + ',' + tirage5 + ',' + tirage6 + "</section>";
+            else {
+                let resultat = "<h3>LE YIKING NE SE TROMPE PAS</h3><br>";
 
-            $(".resultat").html(resultat);}
+                resultat += prenom + '<br>' + question + '<br>';
+                resultat += "<section>" + "Tes tirages sont: " + tirage1 + ',' + tirage2 + ',' + tirage3 + ',' + tirage4 + ',' + tirage5 + ',' + tirage6 + "</section>";
 
-            
+                $(".resultat").html(resultat);
+            }
+
+
 
 
             if (tirage6 == 6) {
@@ -193,7 +197,7 @@
                 $(".hexagramme6").html(hex6);
             }
             else if (tirage6 == 7) {
-                let hex6 = "<p class ='normal'>▬▬▬▬▬▬▬▬<p>";
+                let hex6 = "<p class ='normal'>▬▬▬▬▬▬▬▬▬<p>";
                 $(".hexagramme6").html(hex6);
             }
             else if (tirage6 == 8) {
@@ -313,8 +317,170 @@
                 let hex1 = "Valeur invalide!";
                 $(".hexagramme1").html(hex1);
             }
-      
+            if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                let hexa = ("Hexagrama 1: El creador");
+                $(".hexa").html(hexa);
+            }
 
+            else if ((tirage1) % 2 == 0 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 0) {
+                let hexa = "Hexagrama 2: Lo receptivo";
+                $(".hexa").html(hexa);
+            }
+
+
+            else if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                (tirage4) % 2 == 0 && (tirage5) % 2 == 1 && (tirage6) % 2 == 0) {
+                let hexa = "Hexagrama 3: La dificultad inicial";
+                $(".hexa").html(hexa);
+            }
+
+            else if ((tirage1) % 2 == 0 && (tirage2) % 2 == 1 && (tirage3) % 2 == 0 &&
+                (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                let hexa = "Hexagrama 4: La locura juvenil";
+                $(".hexa").html(hexa);
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 1 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 5: La espera (La nutricion)";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 1 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 6: El conflicto";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 1 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 7: El ejército";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 1 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 8: Pi/La Solidaridad";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 9: El poder dominante de lo pequeño";
+                    $(".hexa").html(hexa);
+                }
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 10: La marcha";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 11: La paz";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 12: El estancamiento";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 13: La comunidad con los hombres";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 14: La posesion de lo gr&&e";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 0 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 15: La humildad";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 0 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 16: El entusiasmo";
+                    $(".hexa").html(hexa);
+                }
+
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 17: El séquito";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 18: ku /El trabajo sobre los corrupto";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 19: Lin/ La aproximacion";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 20: Kuan/La contemplacion";
+                    $(".hexa").html(hexa)
+                };
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 21: Sih Ho/ Mordiendo a través"
+                    $(".hexa").html(hexa);
+                }
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 22: Pi/ La Gracia";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 23: El séquito";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 0) {
+                    let hexa = "Hexagrama 24: Fu/El retorno";
+                    $(".hexa").html(hexa);
+                }
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 25: Fu/El retorno";
+                    $(".hexa").html(hexa);
+                }
+
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                    let hexa = ("Hexagrama 26: Ta Chu/El poder dominante de o gr&&e")
+                }
+                if ((tirage1) % 2 == 1 && (tirage2) % 2 == 0 && (tirage3) % 2 == 0 &&
+                    (tirage4) % 2 == 0 && (tirage5) % 2 == 0 && (tirage6) % 2 == 1) {
+                    let hexa = "Hexagrama 27: Las comisuras de los labios/La nutricion";
+                    $(".hexa").html(hexa);
+                }
+                if ((tirage1) % 2 == 0 && (tirage2) % 2 == 1 && (tirage3) % 2 == 1 &&
+                    (tirage4) % 2 == 1 && (tirage5) % 2 == 1 && (tirage6) % 2 == 0) {
+                        let hexa = "Hexagrama 28: Takuno/El sobrepeso de lo gr&&e";
+                    $(".hexa").html(hexa);
+                }
+
+            }
         })
 
 

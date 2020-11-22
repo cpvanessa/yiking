@@ -113,8 +113,13 @@ label{
     margin-top: 10px;
 }
 
-.resultat, .hexagramme{
+.resultat{font-family: 'Kaushan script','Nunito sans';
+
+}
+
+.resultat, .hexagramme, .hexa{
     text-align: center;
+    color: black;
 }
 
 
